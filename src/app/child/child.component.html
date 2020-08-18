@@ -1,0 +1,32 @@
+<mat-card>
+<!--async pipe in Angular automatically subscribes
+    to an Observable and completes the subscription
+    upon component destruction.
+-->
+    {{limitedEmitter$ | async}}
+</mat-card>
+
+<mat-card>
+    {{alphaEmitter$ | async}}
+</mat-card>
+
+<mat-card>
+    {{combineLatestEmitter$ | async}}
+</mat-card>
+
+<mat-card>
+    {{withLatestFrom$ | async}}
+</mat-card>
+
+<mat-card>
+    {{combineLatestEmitterDistinct$ | async}}
+</mat-card>
+
+<mat-card>
+    {{switchMap$ | async}}
+</mat-card>
+
+
+<button mat-button (click)="destroyMe.emit()">
+  DESTROY ME!
+</button>
